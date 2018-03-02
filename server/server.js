@@ -4,9 +4,20 @@
 // Express code.
 let express = require('express');
 let app = express();
+const calculatorRouter = require('./routes/calculator.router')
 
 // Tells express where our static content is located.
 app.use(express.static('server/public'));
+app.use('/calculator', calculatorRouter);
+
+
+
+
+
+
+
+
+
 
 // Can use any number from 1000 - 99999
 // but don't choose 5432 which is the default for the database.
